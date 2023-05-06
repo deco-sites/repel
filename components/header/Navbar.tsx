@@ -1,6 +1,8 @@
 import type { Image as ImageProps } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
-import NavItem, { NavItemProps } from "deco-sites/start/components/header/NavItem.tsx";
+import NavItem, {
+  NavItemProps,
+} from "deco-sites/start/components/header/NavItem.tsx";
 import Menu from "deco-sites/start/components/header/Menu.tsx";
 
 export interface NavbarProps {

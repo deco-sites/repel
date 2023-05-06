@@ -40,14 +40,14 @@ export default function Menu({ navItems }: MenuProps) {
 
         <div className="w-full z-[-1] absolute left-0 top-[67px]">
           <ul
-            className={` bg-white px-2.5 py-5 ${checkDisplayMenu(
-              "translate-y-[0px] duration-[400ms] ease",
-              "translate-y-[-400px] duration-[400ms] ease"
-            )}`}
+            className={` bg-white px-2.5 py-5 ${
+              checkDisplayMenu(
+                "translate-y-[0px] duration-[400ms] ease",
+                "translate-y-[-400px] duration-[400ms] ease",
+              )
+            }`}
           >
-            {navItems?.map((item) => (
-              <NavItem item={item} />
-            ))}
+            {navItems?.map((item) => <NavItem item={item} />)}
             <li className="mt-[15px]">
               <Link href="/" full>
                 Contact us
@@ -59,9 +59,7 @@ export default function Menu({ navItems }: MenuProps) {
 
       <div className="hidden lg:(block)">
         <ul className="w-full flex bg-white items-center">
-          {navItems?.map((item) => (
-            <NavItem item={item} />
-          ))}
+          {navItems?.map((item) => <NavItem item={item} />)}
           <li className="lg:(pl-5 ml-1)">
             <Link href="/" full>
               Contact us
