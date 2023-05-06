@@ -12,7 +12,8 @@
           "type": "string",
           "not": {
             "enum": [
-              "deco-sites/start/functions/LoadGitHubRaw.ts",
+              "deco-sites/repel/functions/LoadGitHubRaw.ts",
+              "./islands/Menu.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -22,8 +23,9 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
-              "deco-sites/start/sections/GetStarted.tsx",
-              "deco-sites/start/sections/Head.tsx",
+              "deco-sites/repel/sections/GetStarted.tsx",
+              "deco-sites/repel/sections/Head.tsx",
+              "deco-sites/repel/sections/Header.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
               "$live/matchers/MatchEnvironment.ts",
@@ -39,7 +41,7 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==@Props": {
+    "ZGVjby1zaXRlcy9yZXBlbC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==@Props": {
       "type": "object",
       "properties": {
         "repo": {
@@ -63,7 +65,43 @@
         "branch",
         "path"
       ],
-      "title": "deco-sites/start/functions/LoadGitHubRaw.ts@Props"
+      "title": "deco-sites/repel/functions/LoadGitHubRaw.ts@Props"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "href": {
+          "type": "string",
+          "title": "Href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ],
+      "title": "NavItemProps"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps"
+      },
+      "title": "NavItemProps[]"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9NZW51LnRzeA==@MenuProps": {
+      "type": "object",
+      "properties": {
+        "navItems": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps[]",
+          "title": "Nav Items"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/repel/components/header/Menu.tsx@MenuProps"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
       "$ref": "#/root/pages",
@@ -324,7 +362,7 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "enableInspectVSCode": {
@@ -336,9 +374,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/start/sections/GetStarted.tsx@Props"
+      "title": "deco-sites/repel/sections/GetStarted.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -382,7 +420,42 @@
         "styleUrls",
         "themeColor"
       ],
-      "title": "deco-sites/start/sections/Head.tsx@Props"
+      "title": "deco-sites/repel/sections/Head.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9IZWFkZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Src"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [],
+          "title": "Logo"
+        },
+        "navItems": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps[]",
+          "title": "Nav Items",
+          "description": "Navigation items used both on mobile and desktop menus"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/repel/components/header/Header.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
       "type": "object",
@@ -585,13 +658,13 @@
       "required": [],
       "title": "deco-cx/live/flags/everyone.ts@EveryoneConfig"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==": {
+    "ZGVjby1zaXRlcy9yZXBlbC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==": {
       "title": "GitHub Raw Loader",
       "description": "Grabs data from a GitHub repo",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==@Props"
         }
       ],
       "required": [
@@ -601,9 +674,30 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/functions/LoadGitHubRaw.ts"
+            "deco-sites/repel/functions/LoadGitHubRaw.ts"
           ],
-          "default": "deco-sites/start/functions/LoadGitHubRaw.ts"
+          "default": "deco-sites/repel/functions/LoadGitHubRaw.ts"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL01lbnUudHN4": {
+      "title": "./islands/Menu.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9NZW51LnRzeA==@MenuProps"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Menu.tsx"
+          ],
+          "default": "./islands/Menu.tsx"
         }
       }
     },
@@ -796,12 +890,12 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==": {
-      "title": "deco-sites/start/sections/GetStarted.tsx",
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==": {
+      "title": "deco-sites/repel/sections/GetStarted.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props"
         }
       ],
       "required": [
@@ -811,18 +905,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/sections/GetStarted.tsx"
+            "deco-sites/repel/sections/GetStarted.tsx"
           ],
-          "default": "deco-sites/start/sections/GetStarted.tsx"
+          "default": "deco-sites/repel/sections/GetStarted.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==": {
-      "title": "deco-sites/start/sections/Head.tsx",
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA==": {
+      "title": "deco-sites/repel/sections/Head.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA==@Props"
         }
       ],
       "required": [
@@ -832,9 +926,30 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/sections/Head.tsx"
+            "deco-sites/repel/sections/Head.tsx"
           ],
-          "default": "deco-sites/start/sections/Head.tsx"
+          "default": "deco-sites/repel/sections/Head.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkZXIudHN4": {
+      "title": "deco-sites/repel/sections/Header.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9IZWFkZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/repel/sections/Header.tsx"
+          ],
+          "default": "deco-sites/repel/sections/Header.tsx"
         }
       }
     },
@@ -1085,7 +1200,18 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw=="
+        }
+      ]
+    },
+    "islands": {
+      "title": "islands",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL01lbnUudHN4"
         }
       ]
     },
@@ -1139,10 +1265,13 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkZXIudHN4"
         }
       ]
     },
@@ -1233,6 +1362,9 @@
         "anyOf": [
           {
             "$ref": "#/root/functions"
+          },
+          {
+            "$ref": "#/root/islands"
           },
           {
             "$ref": "#/root/handlers"
