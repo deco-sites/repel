@@ -2,15 +2,16 @@ import NavItem, {
   NavItemProps,
 } from "deco-sites/start/components/header/NavItem.tsx";
 import { signal } from "@preact/signals";
-import Link from "deco-sites/start/components/ui/Link.tsx";
+import Button from "deco-sites/start/components/ui/Button.tsx";
 
 export interface MenuProps {
   navItems?: NavItemProps[];
+  button?: NavItemProps;
 }
 
 const displayMenu = signal(false);
 
-export default function Menu({ navItems }: MenuProps) {
+export default function Menu({ navItems, button }: MenuProps) {
   function toggleMenu() {
     displayMenu.value = !displayMenu.value;
   }
@@ -40,31 +41,37 @@ export default function Menu({ navItems }: MenuProps) {
 
         <div className="w-full z-[-1] absolute left-0 top-[67px]">
           <ul
-            className={` bg-white px-2.5 py-5 ${
-              checkDisplayMenu(
-                "translate-y-[0px] duration-[400ms] ease",
-                "translate-y-[-400px] duration-[400ms] ease",
-              )
-            }`}
+            className={` bg-white px-2.5 py-5 ${checkDisplayMenu(
+              "translate-y-[0px] duration-[400ms] ease",
+              "translate-y-[-400px] duration-[400ms] ease"
+            )}`}
           >
-            {navItems?.map((item) => <NavItem item={item} />)}
-            <li className="mt-[15px]">
-              <Link href="/" full>
-                Contact us
-              </Link>
-            </li>
+            {navItems?.map((item) => (
+              <NavItem item={item} />
+            ))}
+            {button?.label && button.href && (
+              <li className="mt-[15px]">
+                <Button href={button?.href} full>
+                  {button?.label}
+                </Button>
+              </li>
+            )}
           </ul>
         </div>
       </div>
 
       <div className="hidden lg:(block)">
         <ul className="w-full flex bg-white items-center">
-          {navItems?.map((item) => <NavItem item={item} />)}
-          <li className="lg:(pl-5 ml-1)">
-            <Link href="/" full>
-              Contact us
-            </Link>
-          </li>
+          {navItems?.map((item) => (
+            <NavItem item={item} />
+          ))}
+          {button?.label && button.href && (
+            <li className="lg:(pl-5 ml-1)">
+              <Button href="/" full>
+                Contact us
+              </Button>
+            </li>
+          )}
         </ul>
       </div>
     </div>

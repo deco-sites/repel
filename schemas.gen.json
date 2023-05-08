@@ -23,7 +23,6 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
-              "deco-sites/repel/sections/GetStarted.tsx",
               "deco-sites/repel/sections/Head.tsx",
               "deco-sites/repel/sections/Header.tsx",
               "$live/matchers/MatchAlways.ts",
@@ -98,6 +97,10 @@
         "navItems": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps[]",
           "title": "Nav Items"
+        },
+        "button": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps",
+          "title": "Button"
         }
       },
       "required": [],
@@ -362,20 +365,6 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "enableInspectVSCode": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Enable Inspect V S Code"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/repel/sections/GetStarted.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -452,6 +441,11 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps[]",
           "title": "Nav Items",
           "description": "Navigation items used both on mobile and desktop menus"
+        },
+        "button": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@NavItemProps",
+          "title": "Button",
+          "description": "Last link in header with highlight"
         }
       },
       "required": [],
@@ -890,27 +884,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==": {
-      "title": "deco-sites/repel/sections/GetStarted.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/repel/sections/GetStarted.tsx"
-          ],
-          "default": "deco-sites/repel/sections/GetStarted.tsx"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA==": {
       "title": "deco-sites/repel/sections/Head.tsx",
       "type": "object",
@@ -1263,9 +1236,6 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA=="
