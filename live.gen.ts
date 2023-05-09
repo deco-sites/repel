@@ -9,6 +9,7 @@ import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Menu.tsx";
 import * as $$$$$$$$0 from "./sections/Head.tsx";
 import * as $$$$$$$$1 from "./sections/Header.tsx";
+import * as $$$$$$$$2 from "./sections/Projects.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -62,6 +63,7 @@ const manifest = {
     "$live/sections/UseSlot.tsx": i1$$$2,
     "deco-sites/repel/sections/Head.tsx": $$$$$$$$0,
     "deco-sites/repel/sections/Header.tsx": $$$$$$$$1,
+    "deco-sites/repel/sections/Projects.tsx": $$$$$$$$2,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i1$0,

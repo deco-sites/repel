@@ -4,7 +4,6 @@ import Image from "deco-sites/std/components/Image.tsx";
 import Menu from "deco-sites/start/components/header/Menu.tsx";
 
 export interface Props {
-  // @title Logo
   logo?: {
     src?: ImageProps;
     alt?: string;
@@ -24,10 +23,16 @@ export interface Props {
 
 export default function Header({ logo, navItems, button }: Props) {
   return (
-    <header className="w-full h-[80px] flex items-center bg-white border-b-1 border-black">
-      <nav className="w-full flex items-center justify-between px-5 py-[15px]  max-w-[1336px] mx-auto">
+    <header class="w-full flex items-center bg-white border-b-1 py-[10px] border-black lg:(py-[15px])">
+      <nav class="w-full flex items-center justify-between px-5 h-[47px] box-border max-w-[1336px] mx-auto lg:(h-[50px])">
         {logo?.src && (
-          <Image src={logo.src} alt={logo.alt} height={21} width={94} />
+          <Image
+            src={logo.src}
+            alt={logo.alt}
+            height={21}
+            width={94}
+            class="mt-[1px] align-middle inline-block"
+          />
         )}
 
         <Menu navItems={navItems} button={button} />

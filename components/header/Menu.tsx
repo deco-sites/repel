@@ -25,32 +25,32 @@ export default function Menu({ navItems, button }: MenuProps) {
 
   return (
     <div>
-      <div className="lg:(hidden)">
+      <div class="lg:(hidden)">
         <div
           onClick={() => {
             toggleMenu();
           }}
-          className="border-0"
+          class="border-0"
         >
-          <div>
-            <span className="block w-[24px] h-[1px] bg-black mb-[6px]"></span>
-            <span className="block w-[24px] h-[0.9px] bg-black"></span>
-            <span className="block w-[24px] h-[1px] bg-black mt-[6px]"></span>
+          <div class="pt-[3px]">
+            <span class="block w-[24px] h-[1px] bg-black mb-[6px]"></span>
+            <span class="block w-[24px] h-[0.9px] bg-black"></span>
+            <span class="block w-[24px] h-[1px] bg-black mt-[7px]"></span>
           </div>
         </div>
 
-        <div className="w-full z-[-1] absolute left-0 top-[67px]">
+        <div class="w-full z-[-1] absolute left-0 top-[67px]">
           <ul
-            className={` bg-white px-2.5 py-5 ${checkDisplayMenu(
-              "translate-y-[0px] duration-[400ms] ease",
-              "translate-y-[-400px] duration-[400ms] ease"
-            )}`}
+            class={` bg-white px-2.5 py-5 ${
+              checkDisplayMenu(
+                "translate-y-[0px] duration-[400ms] ease",
+                "translate-y-[-400px] duration-[400ms] ease",
+              )
+            }`}
           >
-            {navItems?.map((item) => (
-              <NavItem item={item} />
-            ))}
+            {navItems?.map((item) => <NavItem item={item} />)}
             {button?.label && button.href && (
-              <li className="mt-[15px]">
+              <li class="mt-[15px]">
                 <Button href={button?.href} full>
                   {button?.label}
                 </Button>
@@ -60,13 +60,11 @@ export default function Menu({ navItems, button }: MenuProps) {
         </div>
       </div>
 
-      <div className="hidden lg:(block)">
-        <ul className="w-full flex bg-white items-center">
-          {navItems?.map((item) => (
-            <NavItem item={item} />
-          ))}
+      <div class="hidden lg:(block)">
+        <ul class="w-full flex bg-white items-center">
+          {navItems?.map((item) => <NavItem item={item} />)}
           {button?.label && button.href && (
-            <li className="lg:(pl-5 ml-1)">
+            <li class="lg:(pl-5 ml-1)">
               <Button href="/" full>
                 Contact us
               </Button>
