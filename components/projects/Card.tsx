@@ -13,23 +13,27 @@ export default function Card({ card }: { card: CardProps }) {
   const { href, image, title, client, location } = card;
 
   return (
-    <a href={href}>
-      <Image
-        src={image}
-        width={620}
-        class="object-cover align-middle max-h-[410px] inline-block"
-      />
+    <a href={href} class="group">
+      <div class="max-h-[410px] overflow-hidden relative">
+        <Image
+          src={image}
+          width={7500}
+          class="object-cover align-middle inline-block group-hover:(scale-[1.1]) transition-all ease-linear duration-[550ms] ease"
+        />
+
+        <div class="absolute right-0 bottom-0 w-[54px] h-[54px] bg-white opacity-0 transition-all group-hover:(opacity-100 duration-[550ms])" />
+      </div>
 
       <div class="flex items-center mt-2.5">
         <h2 class="w-full max-w-[50%] font-medium">{title}</h2>
 
         <div class="w-full max-w-[50%] pl-2.5 flex flex-col justify-end">
           <div class="flex justify-end flex-wrap">
-            <p class="text-right text-sm leading-[150%]">Client: </p>
+            <p class="text-right text-sm leading-[150%]">Client:</p>
             <p class="text-right text-sm leading-[150%]">{client}</p>
           </div>
           <div class="flex justify-end flex-wrap">
-            <p class="text-right text-sm leading-[150%]">Location: </p>
+            <p class="text-right text-sm leading-[150%]">Location:</p>
             <p class="text-right text-sm leading-[150%]">{location}</p>
           </div>
         </div>

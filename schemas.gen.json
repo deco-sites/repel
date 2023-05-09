@@ -490,7 +490,6 @@
       "items": {
         "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3Byb2plY3RzL0NhcmQudHN4@CardProps"
       },
-      "maxItems": 6,
       "title": "CardProps[]"
     },
     "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3Byb2plY3RzL1Byb2plY3RzLnRzeA==@Props": {

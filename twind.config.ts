@@ -16,7 +16,8 @@ export default {
         transparent: "transparent",
       },
       fontFamily: {
-        sans: ["Albert Sans", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
         serif: ["serif"],
       },
     },
