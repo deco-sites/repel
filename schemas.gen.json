@@ -23,6 +23,7 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+              "deco-sites/repel/sections/Banner.tsx",
               "deco-sites/repel/sections/FrequentlyAskedQuestions.tsx",
               "deco-sites/repel/sections/Head.tsx",
               "deco-sites/repel/sections/Header.tsx",
@@ -366,6 +367,34 @@
         "sections"
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2Jhbm5lci9CYW5uZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Description"
+        },
+        "textButton": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Text Button"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/repel/components/banner/Banner.tsx@Props"
     },
     "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2ZhcS9BY2NvcmRpb24udHN4@AccordionProps": {
       "type": "object",
@@ -1004,6 +1033,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9CYW5uZXIudHN4": {
+      "title": "deco-sites/repel/sections/Banner.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2Jhbm5lci9CYW5uZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/repel/sections/Banner.tsx"
+          ],
+          "default": "deco-sites/repel/sections/Banner.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9GcmVxdWVudGx5QXNrZWRRdWVzdGlvbnMudHN4": {
       "title": "deco-sites/repel/sections/FrequentlyAskedQuestions.tsx",
       "type": "object",
@@ -1398,6 +1448,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9CYW5uZXIudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9GcmVxdWVudGx5QXNrZWRRdWVzdGlvbnMudHN4"
