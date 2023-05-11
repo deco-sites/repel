@@ -1,1 +1,1 @@
-export { default } from "deco-sites/repel/components/header/Menu.tsx";
+export { default } from "deco-sites/start/components/header/Menu.tsx";

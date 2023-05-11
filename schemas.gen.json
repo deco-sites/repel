@@ -23,6 +23,7 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+              "deco-sites/repel/sections/FrequentlyAskedQuestions.tsx",
               "deco-sites/repel/sections/Head.tsx",
               "deco-sites/repel/sections/Header.tsx",
               "deco-sites/repel/sections/Projects.tsx",
@@ -365,6 +366,59 @@
         "sections"
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2ZhcS9BY2NvcmRpb24udHN4@AccordionProps": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Description"
+        }
+      },
+      "required": [],
+      "title": "AccordionProps"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2ZhcS9BY2NvcmRpb24udHN4@AccordionProps[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2ZhcS9BY2NvcmRpb24udHN4@AccordionProps"
+      },
+      "title": "AccordionProps[]"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2ZhcS9GYXEudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "auxiliaryText": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Auxiliary Text"
+        },
+        "titleSection": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title Section"
+        },
+        "accordion": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2ZhcS9BY2NvcmRpb24udHN4@AccordionProps[]",
+          "title": "Accordion"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/repel/components/faq/Faq.tsx@Props"
     },
     "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA==@Props": {
       "type": "object",
@@ -950,6 +1004,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9GcmVxdWVudGx5QXNrZWRRdWVzdGlvbnMudHN4": {
+      "title": "deco-sites/repel/sections/FrequentlyAskedQuestions.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2ZhcS9GYXEudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/repel/sections/FrequentlyAskedQuestions.tsx"
+          ],
+          "default": "deco-sites/repel/sections/FrequentlyAskedQuestions.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA==": {
       "title": "deco-sites/repel/sections/Head.tsx",
       "type": "object",
@@ -1323,6 +1398,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9GcmVxdWVudGx5QXNrZWRRdWVzdGlvbnMudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9IZWFkLnRzeA=="
