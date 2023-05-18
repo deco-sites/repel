@@ -698,12 +698,20 @@
       "required": [],
       "title": "deco-sites/repel/components/projects/Projects.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3NvY2lhbFByb29mL1NvY2lhbFByb29mLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3NvY2lhbFByb29mL0NhcmQudHN4@CardProps": {
       "type": "object",
       "properties": {
-        "testimonial": {
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "alt": {
           "type": "string",
-          "title": "Testimonial"
+          "title": "Alt"
+        },
+        "content": {
+          "type": "string",
+          "title": "Content"
         },
         "author": {
           "type": "string",
@@ -711,8 +719,30 @@
         }
       },
       "required": [
-        "testimonial",
+        "image",
+        "alt",
+        "content",
         "author"
+      ],
+      "title": "CardProps"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3NvY2lhbFByb29mL0NhcmQudHN4@CardProps[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3NvY2lhbFByb29mL0NhcmQudHN4@CardProps"
+      },
+      "title": "CardProps[]"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3NvY2lhbFByb29mL1NvY2lhbFByb29mLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "testimonial": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3NvY2lhbFByb29mL0NhcmQudHN4@CardProps[]",
+          "title": "Testimonial"
+        }
+      },
+      "required": [
+        "testimonial"
       ],
       "title": "deco-sites/repel/components/socialProof/SocialProof.tsx@Props"
     },

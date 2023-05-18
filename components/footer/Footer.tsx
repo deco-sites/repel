@@ -26,7 +26,7 @@ export default function Footer({
   return (
     <footer class="bg-[#0a0045]">
       <div class="max-w-[1336px] mx-auto px-5 pb-[50px] lg:(py-[30px])">
-        <div class="flex flex-col gap-[40px] py-[50px] lg:(flex-row gap-[50px])">
+        <div class="flex flex-col gap-[40px] py-[50px] md:(flex-row gap-[50px])">
           <div class="lg:(flex-1)">
             <div class="lg:(w-[100%] max-w-[350px])">
               <label
@@ -52,7 +52,7 @@ export default function Footer({
             </div>
           </div>
 
-          <div class="flex justify-between gap-[20px] w-[fit-content]">
+          <div class="flex justify-between gap-[20px] w-full md:(w-[fit-content] justify-between)">
             {columnLinks?.map((column) => (
               <div class="w-[fit-content]">
                 <p class="text-white block mb-2.5 font-medium lg:(text-[20px])">

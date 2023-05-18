@@ -23,7 +23,13 @@ export default function Card({ card }: { card: CardProps }) {
           class="object-cover align-middle inline-block group-hover:(scale-[1.1]) transition-all ease-linear duration-[550ms] ease"
         />
 
-        <div class="absolute right-0 bottom-0 w-[54px] h-[54px] bg-white opacity-0 transition-all group-hover:(opacity-100 duration-[550ms])" />
+        <div class="absolute right-0 bottom-0 w-[54px] h-[54px] flex items-center justify-center bg-white opacity-0 transition-all group-hover:(opacity-100 duration-[550ms])">
+          <Image
+            width={20}
+            src="https://assets.website-files.com/63dff3904fd49bed9c9c3c19/63f895fe2ea72738ad0bc846_gallery-plus.svg"
+            alt="Arrow"
+          />
+        </div>
       </div>
 
       <div class="flex items-center mt-2.5">
