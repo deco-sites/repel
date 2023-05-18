@@ -21,7 +21,7 @@ export default function BannerAd({ title, description, textButton }: Props) {
 
         {textButton && (
           <div class="flex justify-center">
-            <Button>{textButton}</Button>
+            <Button href="#" arrow>{textButton}</Button>
           </div>
         )}
       </section>

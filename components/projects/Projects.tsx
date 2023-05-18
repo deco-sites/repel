@@ -30,7 +30,7 @@ export default function Projects({
       </section>
 
       <div class="flex justify-end mt-[30px] mx-2.5 lg:mt-[60px]">
-        <Button>Next</Button>
+        <Button href="#">Next</Button>
       </div>
     </article>
   );

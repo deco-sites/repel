@@ -4,9 +4,10 @@ interface LinkProps {
   href?: string;
   children: string | JSX.Element;
   full?: boolean;
+  arrow?: boolean;
 }
 
-export default function Link({ href, full, children }: LinkProps) {
+export default function Link({ href, full, children, arrow }: LinkProps) {
   return (
     <a
       href={href}
@@ -14,6 +15,10 @@ export default function Link({ href, full, children }: LinkProps) {
       ${full ? "w-full" : "w-[fit-content] "}`}
     >
       {children}
+
+      {arrow && (
+        <img src="https://assets.website-files.com/63dff3904fd49bed9c9c3c19/63f57bc9e975d1faa93be82a_ic-arrow.svg" />
+      )}
     </a>
   );
 }

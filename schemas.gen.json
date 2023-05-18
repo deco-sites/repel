@@ -14,6 +14,7 @@
             "enum": [
               "deco-sites/repel/functions/LoadGitHubRaw.ts",
               "./islands/Menu.tsx",
+              "./islands/SliderJS.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -24,10 +25,13 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/repel/sections/Banner.tsx",
+              "deco-sites/repel/sections/Footer.tsx",
               "deco-sites/repel/sections/FrequentlyAskedQuestions.tsx",
               "deco-sites/repel/sections/Head.tsx",
               "deco-sites/repel/sections/Header.tsx",
               "deco-sites/repel/sections/Projects.tsx",
+              "deco-sites/repel/sections/SliderJS.tsx",
+              "deco-sites/repel/sections/SocialProof.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
               "$live/matchers/MatchEnvironment.ts",
@@ -396,6 +400,93 @@
       "required": [],
       "title": "deco-sites/repel/components/banner/Banner.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2Zvb3Rlci9Gb290ZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "titleNewsletter": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title Newsletter"
+        },
+        "placeholderNewsletter": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Placeholder Newsletter"
+        },
+        "columnLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "titleLinks": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Title Links"
+              },
+              "link": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "title": "Text"
+                    },
+                    "href": {
+                      "type": "string",
+                      "title": "Href"
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "href"
+                  ]
+                },
+                "title": "Link"
+              }
+            },
+            "required": []
+          },
+          "title": "Column Links"
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Location"
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Email"
+        },
+        "copyright": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Copyright"
+        },
+        "developerSite": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Developer Site"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/repel/components/footer/Footer.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2ZhcS9BY2NvcmRpb24udHN4@AccordionProps": {
       "type": "object",
       "properties": {
@@ -546,6 +637,13 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Image"
         },
+        "alt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Alt"
+        },
         "title": {
           "type": "string",
           "title": "Title"
@@ -599,6 +697,24 @@
       },
       "required": [],
       "title": "deco-sites/repel/components/projects/Projects.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3NvY2lhbFByb29mL1NvY2lhbFByb29mLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "testimonial": {
+          "type": "string",
+          "title": "Testimonial"
+        },
+        "author": {
+          "type": "string",
+          "title": "Author"
+        }
+      },
+      "required": [
+        "testimonial",
+        "author"
+      ],
+      "title": "deco-sites/repel/components/socialProof/SocialProof.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
       "type": "object",
@@ -844,6 +960,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL1NsaWRlckpTLnRzeA==": {
+      "title": "./islands/SliderJS.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/SliderJS.tsx"
+          ],
+          "default": "./islands/SliderJS.tsx"
+        }
+      }
+    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "$live/handlers/devPage.ts",
       "type": "object",
@@ -1054,6 +1186,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9Gb290ZXIudHN4": {
+      "title": "deco-sites/repel/sections/Footer.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL2Zvb3Rlci9Gb290ZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/repel/sections/Footer.tsx"
+          ],
+          "default": "deco-sites/repel/sections/Footer.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9GcmVxdWVudGx5QXNrZWRRdWVzdGlvbnMudHN4": {
       "title": "deco-sites/repel/sections/FrequentlyAskedQuestions.tsx",
       "type": "object",
@@ -1135,6 +1288,43 @@
             "deco-sites/repel/sections/Projects.tsx"
           ],
           "default": "deco-sites/repel/sections/Projects.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9TbGlkZXJKUy50c3g=": {
+      "title": "deco-sites/repel/sections/SliderJS.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/repel/sections/SliderJS.tsx"
+          ],
+          "default": "deco-sites/repel/sections/SliderJS.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9Tb2NpYWxQcm9vZi50c3g=": {
+      "title": "deco-sites/repel/sections/SocialProof.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9jb21wb25lbnRzL3NvY2lhbFByb29mL1NvY2lhbFByb29mLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/repel/sections/SocialProof.tsx"
+          ],
+          "default": "deco-sites/repel/sections/SocialProof.tsx"
         }
       }
     },
@@ -1397,6 +1587,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL01lbnUudHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1NsaWRlckpTLnRzeA=="
         }
       ]
     },
@@ -1453,6 +1646,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9CYW5uZXIudHN4"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9Gb290ZXIudHN4"
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9GcmVxdWVudGx5QXNrZWRRdWVzdGlvbnMudHN4"
         },
         {
@@ -1463,6 +1659,12 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9Qcm9qZWN0cy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9TbGlkZXJKUy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yZXBlbC9zZWN0aW9ucy9Tb2NpYWxQcm9vZi50c3g="
         }
       ]
     },

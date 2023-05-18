@@ -7,12 +7,15 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Menu.tsx";
+import * as $$$$$1 from "./islands/SliderJS.tsx";
 import * as $$$$$$$$0 from "./sections/Banner.tsx";
 import * as $$$$$$$$1 from "./sections/Footer.tsx";
 import * as $$$$$$$$2 from "./sections/FrequentlyAskedQuestions.tsx";
 import * as $$$$$$$$3 from "./sections/Head.tsx";
 import * as $$$$$$$$4 from "./sections/Header.tsx";
 import * as $$$$$$$$5 from "./sections/Projects.tsx";
+import * as $$$$$$$$6 from "./sections/SliderJS.tsx";
+import * as $$$$$$$$7 from "./sections/SocialProof.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -59,6 +62,7 @@ const manifest = {
   },
   "islands": {
     "./islands/Menu.tsx": $$$$$0,
+    "./islands/SliderJS.tsx": $$$$$1,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i1$$$0,
@@ -70,6 +74,8 @@ const manifest = {
     "deco-sites/repel/sections/Head.tsx": $$$$$$$$3,
     "deco-sites/repel/sections/Header.tsx": $$$$$$$$4,
     "deco-sites/repel/sections/Projects.tsx": $$$$$$$$5,
+    "deco-sites/repel/sections/SliderJS.tsx": $$$$$$$$6,
+    "deco-sites/repel/sections/SocialProof.tsx": $$$$$$$$7,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i1$0,
