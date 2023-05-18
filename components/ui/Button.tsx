@@ -17,7 +17,7 @@ export default function Link({ href, full, children, arrow }: LinkProps) {
       {children}
 
       {arrow && (
-        <img src="https://assets.website-files.com/63dff3904fd49bed9c9c3c19/63f57bc9e975d1faa93be82a_ic-arrow.svg" />
+        <img src="https://assets.website-files.com/63dff3904fd49bed9c9c3c19/63f57bc9e975d1faa93be82a_ic-arrow.svg" alt="Arrow Right"/>
       )}
     </a>
   );

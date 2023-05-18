@@ -46,6 +46,7 @@ export default function Footer({
                 <img
                   src="https://assets.website-files.com/63dff3904fd49bed9c9c3c19/63f57732a315606fe5a54faf_ic-arrow.svg"
                   class="absolute right-0 bottom-auto top-1/2 transform -translate-y-1/2"
+                  alt="Arrow right"
                 />
               </div>
             </div>
