@@ -19,7 +19,7 @@ export default function Card({ card }: { card: CardProps }) {
         <Image
           src={image}
           alt={alt}
-          width={7500}
+          width={750}
           class="object-cover align-middle inline-block group-hover:(scale-[1.1]) transition-all ease-linear duration-[550ms] ease"
         />
 
